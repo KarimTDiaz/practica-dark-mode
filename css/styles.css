@@ -1,0 +1,288 @@
+:root {
+  /* PRIMARY COLOR */
+  --primary-color: #339ecc;
+
+  /* DARK MODE */
+  --header-background: hsl(217, 28%, 15%);
+  --background-color: hsl(218, 28%, 13%);
+  --card-background: hsl(219, 30%, 18%);
+  /* TEXT-DARK */
+  --text-color: hsl(0, 0%, 100%);
+
+  /* LIGHT MODE */
+  --header-background: hsl(215, 55%, 96%);
+  --background-color: hsl(0, 0%, 100%);
+  --card-background: hsl(220, 21%, 60%);
+  /* TEXT-LIGHT */
+  --text-color: hsl(0, 0%, 20%);
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: 'Open sans', sans-serif;
+  margin: 0;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --header-background: hsl(217, 28%, 15%);
+  --background-color: hsl(218, 28%, 13%);
+  --card-background: hsl(219, 30%, 18%);
+  --text-color: hsl(0, 0%, 100%);
+}
+
+.logo {
+  width: 100px;
+}
+
+.header {
+  background-color: var(--header-background);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.switch-theme {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
+}
+
+.switch-theme__icon {
+  width: 20px;
+}
+
+.header__title {
+  font-size: 2.4rem;
+}
+
+.header__text {
+  font-size: 1.3rem;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 2rem;
+}
+
+.article {
+  display: grid;
+  justify-content: center;
+  padding: 0 2rem 3rem;
+}
+
+.article__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.article__item-title {
+  position: relative;
+}
+
+.article__item-title::after {
+  content: '';
+  left: -5%;
+  position: absolute;
+  top: 120%;
+  width: 110%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.article__item-text {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width:768px) {
+  .article {
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    padding: 4rem;
+  }
+
+}
+
+.article-with-image {
+  position: relative;
+  padding: 3rem;
+
+}
+
+.article-with-image__info {
+  text-align: start;
+  font-size: 1.3rem;
+}
+
+.article-with-image__text {
+  line-height: 3rem;
+}
+
+.article-with-image__link {
+  font-size: 1rem;
+  color: #339ecc;
+}
+
+.article-with-image::after,
+.article-with-image::before {
+  content: '';
+  left: 10%;
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.article-with-image::after {
+  margin-top: 20px;
+}
+
+.article-with-image__image {
+  margin-top: 20px;
+}
+
+@media screen and (min-width:768px) {
+  .article-with-image {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .article-with-image::after {
+    bottom: 0;
+    width: 105%;
+    left: 0;
+  }
+
+  .article-with-image::before {
+    top: 0;
+    width: 105%;
+    left: 0;
+  }
+}
+
+.testimonials {
+  padding: 2rem;
+}
+
+.testimonial {
+  background-color: var(--card-background);
+  border-radius: 2rem;
+  padding: 1.4rem;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 10px 10px 10px var(--primary-color);
+}
+
+.testimonial__author {
+  display: flex;
+  align-items: center;
+ 
+
+}
+
+.testimonial__image {
+  width: 70px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.testimonial__text {
+  font-size: 1.2rem;
+}
+
+.testimonial__name,
+.testimonial__job {
+  margin: 0;
+}
+
+@media screen and (min-width:768px) {
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+  }
+
+}
+
+.change-color {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  position: fixed;
+  right: 0;
+  top: 20%;
+  width: 110px;
+  height: 110px;
+  padding: 1rem;
+  background-color: grey;
+  border-radius: 1rem;
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+}
+
+.color--blue{
+  background-color:#339ecc ;
+}
+.color--pink{
+  background-color:#f30fa7 ;
+}
+.color--green{
+  background-color:#33cc47 ;
+}
+.color--red{
+  background-color:#cc3354 ;
+}
